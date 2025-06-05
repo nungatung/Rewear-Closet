@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | REWEAR</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">REWEAR</div>
+      <div class="tagline">Reduce waste, not your style.</div>
+    </div>
+    
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#whyrewearcloset">Why Rewear Closet</a>
+      <a href="index.html#how">How it Works</a>
+      <a href="index.html#features">Features</a>
+      <a href="partners.html">Partners & Collabs</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+  <!-- About Hero -->
+  <section class="image-break">
+  <div class="image-break-container">
+    <div class="image-break-img">
+      <img src="images/pexels-rewear4-thrift.jpg" alt="Model styling outfit" />
+    </div>
+    <div class="image-break-quote">
+      <blockquote>
+        “Where style meets sustainability.”
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+  <!-- About Content -->
+  <section class="about-section">
+    <div class="about-container">
+
+      <p><strong>Rewear Closet</strong> was born out of a simple idea:<br>
+      <em>The clothes we already own are our greatest untapped resource.</em></p>
+
+      <p>We’re here to close the fashion loop — digitally and stylishly.  
+      Powered by tech, inspired by community, and rooted in climate-conscious design,  
+      Rewear Closet helps you rethink your wardrobe, resell locally, and rewear with intention.</p>
+
+      <p><strong>Fast fashion is costing us more than we think —</strong>
+      our environment, our ethics, and even our self-expression.  
+      Rewear Closet exists to shift that narrative.</p>
+
+      <p>We’re making sustainability stylish, personal, and tech-driven.</p>
+
+      <ul class="about-bullets">
+        <li>✿ <b>Less waste, more taste</b></li>
+        <li>✿ <b>Empowering everyday users to style smarter</b></li>
+        <li>✿ <b>Bringing circular fashion to schools, stores, and closets everywhere</b></li>
+      </ul>
+
+      <p>Founded by a young changemaker with a passion for circular fashion and the planet,  
+      Rewear Closet is a love letter to fashion that lasts.</p>
+
+      <p><strong>This isn’t just an app —<br>it’s a movement.</strong></p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-brand">REWEAR</p>
+        <p class="footer-credit">&copy; 2025 Rewear. Built for sustainable style.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="#whyrewearcloset">Why Rewear Closet</a>
+          <a href="index.html#how">How it Works</a>
+          <a href="index.html#features">Features</a>
+          <a href="partners.html">Partners & Collabs</a>
+          <a href="#blog">Blog</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Fade-In Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => {
+      appearOnScroll.observe(el);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners & Collabs | REWEAR</title>
+  <link rel="stylesheet" href="partners.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">REWEAR</div>
+      <div class="tagline">Reduce waste, not your style.</div>
+    </div>
+    
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="#whyrewearcloset">Why Rewear Closet</a>
+      <a href="index.html#how">How it Works</a>
+      <a href="index.html#features">Features</a>
+      <a href="partners.html">Partners & Collabs</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+<!-- About Hero -->
+  <section class="image-break">
+  <div class="image-break-container">
+    <div class="image-break-img">
+      <img src="images/thrift-store.jpg" alt="Model styling outfit" />
+    </div>
+    <div class="image-break-quote">
+      <blockquote>
+        “Stronger together: Building circular fashion ecosystems.”
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<section class="partners-intro">
+  <div class="partners-intro-container">
+    <p>
+      At <strong>Rewear Closet</strong>, we believe in the power of partnership — from local thrift shops and global fashion brands to design schools and <strong>sustainability-driven</strong> orgs.
+    </p>
+    <p>
+      We’re collaborating with institutions that share our vision: to embed <strong>circularity</strong> into education, commerce, and everyday style.
+    </p>
+    <p>
+      Whether you're a retail giant looking to get real about your green goals, or a fashion school ready to prep students for a post-fast fashion world — we’re ready to build with you.
+    </p>
+  </div>
+</section>
+
+
+<section class="image-break">
+  <div class="image-break-container">
+    <div class="image-break-img">
+      <img src="images/designschool.jpg" alt="Model styling outfit" />
+    </div>
+    <div class="image-break-quote">
+      <blockquote>
+        “Giving tomorrow’s designers the tools to design for impact.”
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="partners-design">
+  <div class="section-heading">
+    <h2>FOR DESIGN SCHOOLS / STUDENTS</h2>
+  </div>
+  <div class="partners-design-content">
+  <p>
+    We’re partnering with fashion schools to bring real-world circular economy tools into the classroom.
+  </p>
+
+  <p>Through <strong>Rewear Closet</strong>, students can:</p>
+
+  <ul class="design-benefits">
+    <li>✔ Upload and digitally style their collections</li>
+    <li>✔ Resell past garments safely and locally</li>
+    <li>✔ Promote their brand with in-app stores</li>
+    <li>✔ Learn the value of sustainable design through tech</li>
+  </ul>
+
+  <p><strong>Bonus:</strong> We provide schools with analytics, insights, and opportunities to integrate Rewear Closet into coursework and capstone projects.</p>
+  <a href="mailto:hello@rewearcloset.com" class="cta-button">
+    ✉️ Partner With Us
+  </a>
+</div>
+
+</section>
+
+
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-brand">REWEAR</p>
+        <p class="footer-credit">&copy; 2025 Rewear. Built for sustainable style.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="#whyrewearcloset">Why Rewear Closet</a>
+          <a href="index.html#how">How it Works</a>
+          <a href="index.html#features">Features</a>
+          <a href="partners.html">Partners & Collabs</a>
+          <a href="#blog">Blog</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Fade-In Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => {
+      appearOnScroll.observe(el);
+    });
+  </script>
+
+</body>
+</html>  
