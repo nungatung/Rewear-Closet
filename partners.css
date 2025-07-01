@@ -22,7 +22,7 @@ html {
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -55,6 +55,85 @@ html {
 
 .nav a:hover {
   opacity: 0.6;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1201;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Sidebar styles */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  transition: left 0.3s;
+  z-index: 1200;
+}
+.sidebar-nav.open {
+  left: 0;
+}
+.sidebar-nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+}
+.sidebar-nav a:hover {
+  opacity: 0.6;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #111;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+/* Show hamburger and hide normal nav on mobile */
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+  .sidebar-nav {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+    margin-top: 18px;
+  }
+}
+@media (min-width: 701px) {
+  .sidebar-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
 }
 
 /* Hero Section*/

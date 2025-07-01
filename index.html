@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>REWEAR</title>
+  <title>Home | REWEAR</title>
+  <link rel="icon" type="image/png" href="images/reuse.png" sizes="512x512" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -12,12 +13,19 @@
 <body>
 
     <!-- 🌐 Header -->
-  <header class="header">
+<header class="header">
   <div class="header-left">
     <div class="logo">Rewear</div>
     <div class="tagline">Reduce waste, not your style.</div>
   </div>
-    
+  
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -27,12 +35,28 @@
       <a href="partners.html">Partners & Collabs</a>
       <a href="#blog">Blog</a>
     </nav>
-  </header>
+  
+    <!-- hamburger/sidebar for mobile -->
+  <nav class="sidebar-nav" id="sidebarNav">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+     <a href="index.html">Home</a>
+     <a href="about.html">About Us</a>
+     <a href="#whyrewearcloset">Why Rewear Closet</a>
+     <a href="#how">How it Works</a>
+     <a href="#features">Features</a>
+     <a href="partners.html">Partners & Collabs</a>
+     <a href="#blog">Blog</a>
+  </nav>
+</header>
 
   <!-- 🖼️ Hero Section -->
-  <section class="hero-video-section">
-  <video autoplay muted loop playsinline class="hero-video">
+<section class="hero-video-section" style="position: relative;">
+  <video autoplay muted playsinline class="hero-video" id="heroVideo1">
     <source src="videos/hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video muted playsinline class="hero-video" id="heroVideo2" style="opacity:0;">
+    <source src="videos/thrifting.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </section>
@@ -134,7 +158,7 @@
 
     <div class="footer-left">
       <p class="footer-brand">REWEAR</p>
-      <p class="footer-credit">&copy; 2025 Rewear. Built for sustainable style.</p>
+      <p class="footer-credit">&copy; 2024 Rewear. Built for sustainable style.</p>
     </div>
 
     <div class="footer-right">
@@ -149,7 +173,7 @@
         </nav>
 
       <div class="footer-socials">
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-tiktok"></i></a>
       </div>
@@ -158,24 +182,7 @@
   </div>
 </footer>
 
-
-
-<script>
-  const faders = document.querySelectorAll('.fade-in');
-
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  faders.forEach(el => {
-    appearOnScroll.observe(el);
-  });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
 

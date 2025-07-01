@@ -4,28 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | REWEAR</title>
+  <link rel="icon" type="image/png" href="images/reuse.png" sizes="512x512" />
   <link rel="stylesheet" href="about.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-left">
-      <div class="logo">REWEAR</div>
-      <div class="tagline">Reduce waste, not your style.</div>
-    </div>
+  <!-- 🌐 Header -->
+<header class="header">
+  <div class="header-left">
+    <div class="logo">Rewear</div>
+    <div class="tagline">Reduce waste, not your style.</div>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="#whyrewearcloset">Why Rewear Closet</a>
-      <a href="index.html#how">How it Works</a>
-      <a href="index.html#features">Features</a>
+      <a href="#how">How it Works</a>
+      <a href="#features">Features</a>
       <a href="partners.html">Partners & Collabs</a>
       <a href="#blog">Blog</a>
     </nav>
-  </header>
+
+  <nav class="sidebar-nav" id="sidebarNav">
+    <button class="close-btn" id="closeSidebar">&times;</button>
+     <a href="index.html">Home</a>
+     <a href="about.html">About Us</a>
+     <a href="#whyrewearcloset">Why Rewear Closet</a>
+     <a href="#how">How it Works</a>
+     <a href="#features">Features</a>
+     <a href="partners.html">Partners & Collabs</a>
+     <a href="#blog">Blog</a>
+  </nav>
+</header>
 
   <!-- About Hero -->
   <section class="image-break">
@@ -72,12 +90,60 @@
     </div>
   </section>
 
+
+  <!-- Team Member Section -->
+   <section class="team-header">
+    <h2>The Team Behind Rewear Closet</h2>
+  </section>
+
+  <section class="team-section">
+    <div class="team-card">
+      <img src="images/Tamlyn.jpg" alt="Tamlyn Stevens">
+      <p class="role">Founder,CEO </p>
+      <h3>Tamlyn Stevens</h3>
+      <p class="bio">Driven by a deep love for sustainable fashion and a commitment to responsible practices, 
+        Tamlyn launched Rewear Closet to challenge the fast fashion cycle and reimagine how we value clothing. With a foundation in environmental engineering, 
+        her approach blends technical insight with environmental accountability — building digital tools that help reshape fashion consumption through data, design, and responsible reuse.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="images/Shalum.png" alt="Shalum Samuels">
+      <p class="role">Lead Developer</p>
+      <h3>Shalum Samuels</h3>
+      <p class="bio">As the senior developer at Rewear Closet, Shalum co-leads the creation of innovative software solutions that support sustainable fashion. 
+         Our work is centered on encouraging people to rewear what they already own while incentivizing greener choices through thoughtful, tech-enabled experiences.
+         With a strong foundation in solar energy and sustainable power system design, I bring a systems-thinking mindset to every project. 
+         Shalum's development background spans HTML, CSS, JavaScript, React.js, and Python — with a focus on crafting seamless, user-centered interfaces that elevate both UX and UI. 
+         He's passionate about using code to create change, ensuring that every feature we build at Rewear Closet contributes to a more conscious and circular fashion future.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="images/Winston.png" alt="Winston F. Rossouw">
+      <p class="role">Chief Operations Officer</p>
+      <h3>Winston F. Rossouw</h3>
+      <p class="bio">With over 20 years of experience as a licensed professional engineer (P.Eng., MSc., PMP), 
+        Winston collaborates with small and medium-sized businesses to ignite innovation and drive growth through data-driven strategies. 
+        Blending deep engineering expertise, hands-on problem-solving, and a profound respect for both natural and built environments, Winston navigates the pivotal intersection of climate change and infrastructure. His sustainable engineering practices, life-cycle assessments, carbon-footprint modeling, and circular-design principles—directly inform Rewear Closet’s development. 
+        He remain passionate about advancing sustainable practices, staying ahead of industry trends, and fostering a culture of recycling, reuse, and repurposing.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
         <p class="footer-brand">REWEAR</p>
-        <p class="footer-credit">&copy; 2025 Rewear. Built for sustainable style.</p>
+        <p class="footer-credit">&copy; 2024 Rewear. Built for sustainable style.</p>
       </div>
       <div class="footer-right">
         <nav class="footer-nav">
@@ -90,7 +156,7 @@
           <a href="#blog">Blog</a>
         </nav>
         <div class="footer-socials">
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
@@ -98,22 +164,6 @@
     </div>
   </footer>
 
-  <!-- Scroll Fade-In Script -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    faders.forEach(el => {
-      appearOnScroll.observe(el);
-    });
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
