@@ -57,6 +57,53 @@ html {
   opacity: 0.6;
 }
 
+.logo-tagline-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Only use .logo-tagline-wrap for mobile */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0.7rem;
+    gap: 0.5rem;
+  }
+  .header-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.7rem;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .hamburger {
+    display: flex;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    order: 1;
+  }
+  .logo-tagline-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 2;
+  }
+  .logo {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
+  .tagline {
+    display: block;
+    font-size: 0.95rem;
+    margin-top: 0.1rem;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+}
+
 /* Hamburger styles */
 .hamburger {
   display: none;
@@ -184,6 +231,43 @@ html {
   color: #333;
 }
 
+@media (max-width: 700px) {
+  .image-break {
+    padding: 2rem 0.5rem;
+  }
+  .image-break-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .image-break-img {
+    max-width: 100%;
+    flex: none;
+    margin: 0 auto;
+  }
+  .image-break-img img {
+    width: 90%;
+    height: 420px;
+    max-width: 320px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    display: block;
+  }
+  .image-break-quote {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    text-align: center;
+  }
+  .image-break-quote blockquote {
+    padding-left: 0.5rem;
+    border-left-width: 3px;
+    font-size: 1rem;
+  }
+}
 
 /* Partners Section */
 .partners-intro {
@@ -237,7 +321,7 @@ html {
   max-width: 880px;
   margin: 0 auto;
   padding: 0 1rem;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
   color: #333;
@@ -277,14 +361,70 @@ html {
 }
 
 .cta-button:hover {
-  transform: translateY(-5px);
+  margin-bottom: 2rem;
 }
+
+@media (max-width: 700px) {
+  .partners-intro {
+    padding: 2rem 1.2rem;
+  }
+
+  .partners-intro-container {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .partners-intro-container p {
+    padding-left: 0.9rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #111;
+  }
+
+  .section-heading {
+    margin: 2.5rem auto 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.4rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid #111;
+  }
+
+  .partners-design-content {
+    padding: 0 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .partners-design-content p {
+    margin-bottom: 1.2rem;
+  }
+
+  .design-benefits {
+    padding-left: 1rem;
+  }
+
+  .design-benefits li {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 
 
 
 
 /* Footer */
 .footer {
+  margin-top: 2rem;
   background-color: #fff;
   border-top: 1px solid #ddd;
   padding: 3rem 2rem;
@@ -352,4 +492,51 @@ html {
 
 .footer-socials a:hover {
   opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 2rem 0.7rem;
+    font-size: 0.98rem;
+  }
+  .footer-container {
+    gap: 0.7rem; 
+    margin-left: 10px;
+  }
+  .footer-left {
+    margin-bottom: 0.5rem;
+  }
+  .footer-right {
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .footer-nav a {
+    padding: 0.7rem 0;
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+  }
+  /* Add separation lines between specific links */
+  .footer-nav a:nth-child(1),
+  .footer-nav a:nth-child(2),
+  .footer-nav a:nth-child(3),
+  .footer-nav a:nth-child(4),
+  .footer-nav a:nth-child(5),
+  .footer-nav a:nth-child(6) {
+    border-bottom: 1px solid #eee;
+  }
+  /* Remove border from last link */
+  .footer-nav a:last-child {
+    border-bottom: none;
+  }
+  .footer-socials {
+    margin-top: 1rem;
+  }
 }

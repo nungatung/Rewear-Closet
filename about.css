@@ -173,6 +173,7 @@ html {
     display: flex;
     margin-top: 18px;
   }
+  
 }
 @media (min-width: 701px) {
   .sidebar-nav {
